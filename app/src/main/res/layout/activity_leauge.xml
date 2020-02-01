@@ -51,29 +51,30 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="48dp"
         android:layout_marginStart="48dp"
         android:layout_marginLeft="48dp"
         android:layout_marginEnd="48dp"
         android:layout_marginRight="48dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.250">
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
 
         <ToggleButton
-            android:id="@+id/toggleButton"
+            android:id="@+id/toggleMenBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/swoosh_toggle"
             android:text="Men"
             android:textColor="@color/colorAccent"
             android:textOff="Men"
-            android:textOn="Men" />
+            android:textOn="Men"
+            android:onClick="onMenClicked"/>
 
         <ToggleButton
-            android:id="@+id/toggleButton2"
+            android:id="@+id/toggleWomenBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
@@ -82,17 +83,19 @@
             android:text="Women"
             android:textColor="@color/colorAccent"
             android:textOff="Women"
-            android:textOn="Women" />
+            android:textOn="Women"
+            android:onClick="onWomenClicked"/>
 
         <ToggleButton
-            android:id="@+id/toggleButton3"
+            android:id="@+id/toggleCoEdBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/swoosh_toggle"
             android:text="Co-Ed"
             android:textColor="@color/colorAccent"
             android:textOff="Co-Ed"
-            android:textOn="Co-Ed" />
+            android:textOn="Co-Ed"
+            android:onClick="onCoEdClicked"/>
     </LinearLayout>
 
     <Button
