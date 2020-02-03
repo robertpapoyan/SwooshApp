@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.view.View
 import kotlinx.android.synthetic.main.activity_leauge.*
 
-class LeaugeActivity : AppCompatActivity() {
+class LeaugeActivity : BaseActivity() {
 
     var selectedLeague = ""
 
