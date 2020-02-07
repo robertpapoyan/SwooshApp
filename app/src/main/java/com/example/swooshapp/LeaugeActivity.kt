@@ -1,5 +1,6 @@
 package com.example.swooshapp
 
+import android.widget.Toast
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -11,13 +12,9 @@ class LeaugeActivity : BaseActivity() {
     var selectedLeague = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_leauge)
-
-        getStartedBtn.setOnClickListener {
-            val intent = Intent(this, SkillActivity::class.java)
-            startActivity(intent)
-        }
     }
 
 
@@ -44,4 +41,19 @@ class LeaugeActivity : BaseActivity() {
 
         selectedLeague = "co ed"
     }
+
+    fun getStartedClicked (view: View){
+        if (selectedLeague != "") {
+
+            val intent = Intent(this, SkillActivity::class.java)
+            intent.putExtra(EXTRA_LEAGUE, selectedLeague)
+            startActivity(intent)
+        } else{
+
+            Toast.makeText(this,"Please select the league...",Toast.LENGTH_SHORT).show()
+        }
+    }
+
 }
+
+
