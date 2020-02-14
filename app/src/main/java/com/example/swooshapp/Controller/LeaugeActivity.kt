@@ -25,6 +25,10 @@ class LeaugeActivity : BaseActivity() {
         toggleCoEdBtn.isChecked = false
 
         selectedLeague = "Men"
+
+        if (toggleMenBtn.isChecked == false){
+            selectedLeague = ""
+        }
     }
 
     fun onWomenClicked(view: View){
@@ -33,6 +37,10 @@ class LeaugeActivity : BaseActivity() {
         toggleCoEdBtn.isChecked = false
 
         selectedLeague = "Women"
+
+        if (toggleWomenBtn.isChecked == false){
+            selectedLeague = ""
+        }
     }
 
     fun onCoEdClicked(view: View){
@@ -41,6 +49,10 @@ class LeaugeActivity : BaseActivity() {
         toggleWomenBtn.isChecked = false
 
         selectedLeague = "Co-Ed"
+
+        if (toggleCoEdBtn.isChecked == false){
+            selectedLeague = ""
+        }
     }
 
     fun getStartedClicked (view: View){

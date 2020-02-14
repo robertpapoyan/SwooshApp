@@ -25,12 +25,20 @@ class SkillActivity : AppCompatActivity() {
 
         toggleBallerBtn.isChecked = false
         selectedSkill = "Beginner"
+
+        if(toggleBeginnerBtn.isChecked == false){
+            selectedSkill = ""
+        }
     }
 
     fun onBallerClicked (view: View){
 
         toggleBeginnerBtn.isChecked = false
         selectedSkill = "Baller"
+
+        if (toggleBallerBtn.isChecked == false){
+            selectedSkill = ""
+        }
     }
 
     fun onFinishClicked(view: View){
