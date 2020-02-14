@@ -1,10 +1,11 @@
-package com.example.swooshapp
+package com.example.swooshapp.Controller
 
 import android.widget.Toast
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import com.example.swooshapp.Utilities.EXTRA_LEAGUE
+import com.example.swooshapp.R
 import kotlinx.android.synthetic.main.activity_leauge.*
 
 class LeaugeActivity : BaseActivity() {
@@ -23,7 +24,7 @@ class LeaugeActivity : BaseActivity() {
         toggleWomenBtn.isChecked = false
         toggleCoEdBtn.isChecked = false
 
-        selectedLeague = "men"
+        selectedLeague = "Men"
     }
 
     fun onWomenClicked(view: View){
@@ -31,7 +32,7 @@ class LeaugeActivity : BaseActivity() {
         toggleMenBtn.isChecked = false
         toggleCoEdBtn.isChecked = false
 
-        selectedLeague = "women"
+        selectedLeague = "Women"
     }
 
     fun onCoEdClicked(view: View){
@@ -39,7 +40,7 @@ class LeaugeActivity : BaseActivity() {
         toggleMenBtn.isChecked = false
         toggleWomenBtn.isChecked = false
 
-        selectedLeague = "co ed"
+        selectedLeague = "Co-Ed"
     }
 
     fun getStartedClicked (view: View){

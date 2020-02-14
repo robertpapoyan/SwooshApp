@@ -1,4 +1,4 @@
-package com.example.swooshapp
+package com.example.swooshapp.Controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
