@@ -98,8 +98,9 @@
         android:layout_marginLeft="15dp"
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
-        android:layout_marginBottom="15dp"
+        android:layout_marginBottom="48dp"
         android:background="@drawable/swoosh_button"
+        android:onClick="onFinishClicked"
         android:text="FINISH"
         android:textColor="@color/colorAccent"
         android:textSize="18sp"
@@ -108,8 +109,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.895"
-        android:onClick="onFinishClicked"/>
+        app:layout_constraintVertical_bias="0.895" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
