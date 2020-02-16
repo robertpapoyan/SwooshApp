@@ -12,10 +12,25 @@ class LeaugeActivity : BaseActivity() {
 
     var selectedLeague = ""
 
+    override fun onSaveInstanceState(outState: Bundle) {
+
+        super.onSaveInstanceState(outState)
+        outState?.putString(EXTRA_LEAGUE, selectedLeague)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_leauge)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+
+        super.onRestoreInstanceState(savedInstanceState)
+        if (savedInstanceState != null){
+
+            selectedLeague = savedInstanceState.getString(EXTRA_LEAGUE).toString()
+        }
     }
 
 

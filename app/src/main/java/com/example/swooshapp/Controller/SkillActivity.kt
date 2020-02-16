@@ -15,10 +15,27 @@ class SkillActivity : AppCompatActivity() {
     var selectedSkill = ""
     var league = ""
 
+    override fun onSaveInstanceState(outState: Bundle) {
+
+        super.onSaveInstanceState(outState)
+        outState?.putString(EXTRA_LEAGUE, league)
+        outState?.putString(EXTRA_SKILL, selectedSkill)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_skill)
         league = intent.getStringExtra(EXTRA_LEAGUE)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+
+        super.onRestoreInstanceState(savedInstanceState)
+        if (savedInstanceState != null) {
+
+            league = savedInstanceState.getString(EXTRA_LEAGUE).toString()
+            selectedSkill = savedInstanceState.getString(EXTRA_SKILL).toString()
+        }
     }
 
     fun onBeginnerClicked(view: View){
